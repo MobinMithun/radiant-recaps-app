@@ -1,4 +1,4 @@
-import urShopLogo from "@/assets/URSHOP_Main_Logo.png.asset.json";
+import urShopLogo from "@/assets/URSHOP_Main_Logo.png";
 
 // Markup ported from the provided design.
 export const landingBodyClass = "bg-[#FAFBFD] text-slate-900 antialiased selection:bg-brand-light selection:text-brand-dark relative overflow-x-hidden";
@@ -16,7 +16,7 @@ export const landingHtml = `
 <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-3 pb-2">
 <div class="h-20 px-6 sm:px-8 flex items-center justify-between gap-4 rounded-full liquid-glass" style="min-height: 86px; border: 1.5px solid rgba(255, 255, 255, 0.85); box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.1), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95);">
 <div class="flex items-center gap-3">
-<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[150px] object-contain drop-shadow-sm" src="${urShopLogo.url}"></a>
+<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[150px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
 </div>
 <div class="flex items-center gap-4 sm:gap-6">
 <a class="text-sm sm:text-base font-bold text-slate-700 hover:text-slate-900 transition-colors px-3 py-1.5 rounded-full hover:bg-white/50" href="#">Log in</a>
@@ -503,7 +503,7 @@ export const landingHtml = `
 <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-16">
 <!-- Column 1: Brand & Trust Block (md:col-span-4) -->
 <div class="md:col-span-4 flex flex-col items-start gap-5">
-<a class="inline-block" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[160px] object-contain drop-shadow-sm" src="${urShopLogo.url}"></a>
+<a class="inline-block" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[160px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
 <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
           Empowering businesses and creators in Bangladesh to scale with ease. We provide the secure tools you need to build, grow, and automate your store.
         </p>
