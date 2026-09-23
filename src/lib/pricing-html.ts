@@ -17,7 +17,7 @@ export const pricingHtml = `
 <main class="w-full max-w-6xl mx-auto px-6 sm:px-12 pb-24 pt-16">
 <!-- Top Breadcrumb & Status Bar -->
 <div class="flex items-center justify-between mb-8">
-<a class="inline-flex items-center gap-1.5 text-slate-600 hover:text-[#08C0D8] text-[13px] font-semibold transition-colors group px-3.5 py-1.5 rounded-full liquid-glass-subtle" href="#">
+<a class="inline-flex items-center gap-1.5 text-slate-600 hover:text-[#08C0D8] text-[13px] font-semibold transition-colors group px-3.5 py-1.5 rounded-full liquid-glass-subtle" href="/">
 <span class="material-symbols-outlined text-[18px] group-hover:-translate-x-0.5 transition-transform text-[#08C0D8]">arrow_back</span>
 <span class="">Back to Home</span>
 </a>
