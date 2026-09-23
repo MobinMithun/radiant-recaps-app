@@ -63,9 +63,7 @@ export const landingHtml = `
 <span class="text-xs font-semibold text-slate-700 tracking-tight">Launch your online shop in under 5 minutes</span>
 </div>
 <!-- Hero Title -->
-<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mb-6 font-sans">
-    Start selling<div><span class="cyan-underline relative inline-block px-1">products online</span></div>
-</h1>
+<div id="hero-title-mount"><h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mb-6 font-sans">Start selling<div><span class="cyan-underline relative inline-block px-1">products</span></div></h1></div>
 <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed font-normal">
     The simplest way for online shops to manage orders and delivery.
   </p>
@@ -95,13 +93,13 @@ export const landingHtml = `
 <!-- 3 Steps Grid with Connecting Stem Lines -->
 <div class="relative">
 <!-- Horizontal Connector Guide Line (Desktop) -->
-<div class="hidden md:block absolute -top-8 left-[16%] right-[16%] h-[1px] bg-slate-300/80 z-0"></div>
+<div class="how-it-works-data-line hidden md:block absolute -top-8 left-[16%] right-[16%] h-[1px] bg-slate-300/80 z-0"></div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
 <!-- Step 01 Card -->
 <div class="relative flex flex-col pt-6 md:pt-8">
 <div class="hidden md:flex flex-col items-center absolute -top-8 left-1/2 -translate-x-1/2 h-8 pointer-events-none z-20">
 <div class="w-[1px] h-full bg-slate-300"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
+<div class="how-it-works-data-point how-it-works-data-point-1 w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
 </div>
 <div class="liquid-glass-card rounded-3xl p-8 flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover" style="border-radius: 28px;">
 <div>
@@ -110,9 +108,6 @@ export const landingHtml = `
 <div class="w-14 h-14 rounded-2xl bg-[#FFD000] flex items-center justify-center overflow-hidden shadow-sm">
 <span class="text-2xl">⚡</span>
 </div>
-<div class="absolute -bottom-1 -right-1.5 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100 text-xs text-amber-600 ring-2 ring-white">
-                    ✍️
-                  </div>
 </div>
 <span class="text-6xl font-extrabold tracking-tight select-none text-slate-200/80 font-sans">01</span>
 </div>
@@ -126,7 +121,7 @@ export const landingHtml = `
 <div class="relative flex flex-col pt-6 md:pt-8">
 <div class="hidden md:flex flex-col items-center absolute -top-8 left-1/2 -translate-x-1/2 h-8 pointer-events-none z-20">
 <div class="w-[1px] h-full bg-slate-300"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
+<div class="how-it-works-data-point how-it-works-data-point-2 w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
 </div>
 <div class="liquid-glass-card rounded-3xl p-8 flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover" style="border-radius: 28px;">
 <div>
@@ -135,9 +130,6 @@ export const landingHtml = `
 <div class="w-14 h-14 rounded-2xl bg-[#D8ECFE] flex items-center justify-center overflow-hidden shadow-sm">
 <span class="text-2xl">📦</span>
 </div>
-<div class="absolute -bottom-1 -right-1.5 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100 text-xs text-brand ring-2 ring-white">
-                    🔗
-                  </div>
 </div>
 <span class="text-6xl font-extrabold tracking-tight select-none text-slate-200/80 font-sans">02</span>
 </div>
@@ -150,7 +142,7 @@ export const landingHtml = `
 <div class="relative flex flex-col pt-6 md:pt-8">
 <div class="hidden md:flex flex-col items-center absolute -top-8 left-1/2 -translate-x-1/2 h-8 pointer-events-none z-20">
 <div class="w-[1px] h-full bg-slate-300"></div>
-<div class="w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
+<div class="how-it-works-data-point how-it-works-data-point-3 w-2.5 h-2.5 rounded-full bg-white border-2 border-slate-300 -mt-1 shadow-sm"></div>
 </div>
 <div class="liquid-glass-card rounded-3xl p-8 flex flex-col justify-between h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-glass-hover" style="border-radius: 28px;">
 <div>
@@ -159,9 +151,6 @@ export const landingHtml = `
 <div class="w-14 h-14 rounded-2xl bg-[#D5F5E3] flex items-center justify-center overflow-hidden shadow-sm">
 <span class="text-2xl">🚀</span>
 </div>
-<div class="absolute -bottom-1 -right-1.5 w-6 h-6 rounded-full bg-white shadow-md flex items-center justify-center border border-slate-100 text-xs text-emerald-600 ring-2 ring-white">
-                    💸
-                  </div>
 </div>
 <span class="text-6xl font-extrabold tracking-tight select-none text-slate-200/80 font-sans">03</span>
 </div>
@@ -484,7 +473,7 @@ export const landingHtml = `
       </p>
 <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
 <span id="start-free-trial-button-mount" class="inline-flex w-full sm:w-auto"></span>
-<a class="book-calendar-button w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-slate-800 font-semibold text-base transition-all duration-300 border hover:bg-white/80 active:scale-95" href="#" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
+<a class="book-calendar-button w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-slate-800 font-bold text-sm transition-all duration-300 border hover:bg-white/80 active:scale-95" href="#" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
           Book Calendar
         </a>
 </div>

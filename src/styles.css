@@ -327,12 +327,6 @@ body {
   background-color: rgba(236, 254, 255, 0.96);
 }
 
-@media (max-width: 767px) {
-  #comparison-section .comparison-table-scroll {
-    overflow-x: auto;
-  }
-}
-
 .book-calendar-button {
   box-sizing: border-box;
   width: 8.875rem;
@@ -359,6 +353,57 @@ body {
 .cyan-underline {
   background: linear-gradient(to bottom, transparent 65%, rgba(186, 230, 253, 0.75) 65%);
   display: inline;
+}
+
+.how-it-works-data-line {
+  isolation: isolate;
+}
+
+.how-it-works-data-line::after {
+  position: absolute;
+  top: -3.5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #08c0d8;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(8, 192, 216, 0.55);
+  content: "";
+  animation: how-it-works-data-transfer 3.6s linear infinite;
+}
+
+.how-it-works-data-point {
+  animation: how-it-works-data-pulse 3.6s ease-in-out infinite;
+}
+
+.how-it-works-data-point-2 {
+  animation-delay: 1.2s;
+}
+
+.how-it-works-data-point-3 {
+  animation-delay: 2.4s;
+}
+
+@keyframes how-it-works-data-transfer {
+  to {
+    left: calc(100% - 8px);
+  }
+}
+
+@keyframes how-it-works-data-pulse {
+  0%,
+  20%,
+  100% {
+    border-color: #cbd5e1;
+    box-shadow: 0 0 0 rgba(8, 192, 216, 0);
+    transform: scale(1);
+  }
+  8% {
+    border-color: #08c0d8;
+    box-shadow: 0 0 12px rgba(8, 192, 216, 0.55);
+    transform: scale(1.35);
+  }
 }
 
 .brand-name-input::placeholder {
@@ -428,6 +473,11 @@ body {
   }
 
   .hero-earning-badge {
+    animation: none;
+  }
+
+  .how-it-works-data-line::after,
+  .how-it-works-data-point {
     animation: none;
   }
 

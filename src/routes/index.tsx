@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { useEffect } from "react";
 
 import MetallicButton from "@/components/ui/metallic-button";
+import { DiaText } from "@/components/dia-text";
 import { landingBodyClass, landingHtml } from "@/lib/landing-html";
 import { initLandingScripts } from "@/lib/landing-scripts";
 
@@ -55,6 +56,27 @@ function Index() {
       );
       return [root];
     });
+
+    const titleElement = document.getElementById("hero-title-mount");
+    if (titleElement) {
+      const titleRoot = createRoot(titleElement);
+      titleRoot.render(
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mb-6 font-sans">
+          Start selling
+          <div>
+            <span className="cyan-underline relative inline-block px-1">
+              <DiaText
+                words={["products", "digitals", "anything"]}
+                duration={2400}
+                className="min-w-0 text-slate-900"
+              />
+              <span className="text-slate-900">{" online"}</span>
+            </span>
+          </div>
+        </h1>,
+      );
+      roots.push(titleRoot);
+    }
 
     return () => roots.forEach((root) => root.unmount());
   }, []);

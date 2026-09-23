@@ -1,5 +1,5 @@
 // Markup ported from the provided design.
-export const pricingBodyClass = "text-[#0F172A] antialiased overflow-x-hidden selection:bg-[#08C0D8] selection:text-slate-900 min-h-screen";
+export const pricingBodyClass = "text-[#0F172A] antialiased overflow-x-clip selection:bg-[#08C0D8] selection:text-slate-900 min-h-screen";
 export const pricingBodyStyle = "background-color: #ffffff;";
 
 export const pricingHtml = `
