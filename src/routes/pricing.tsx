@@ -1,14 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 
-import { landingBodyClass, landingHtml } from "@/lib/landing-html";
+import { pricingBodyClass, pricingHtml } from "@/lib/pricing-html";
 import { initLandingScripts } from "@/lib/landing-scripts";
 
-const title = "UrShop — Launch your online shop in under 5 minutes";
+const title = "UrShop Pricing — Plans for every Bangladeshi shop";
 const description =
-  "The simplest way for Bangladeshi shops and creators to sell products online: bKash & Nagad payouts, automated Pathao, Steadfast and RedX delivery, and a clean checkout page.";
+  "Compare UrShop plans: monthly or yearly billing, unlimited products, bKash and Nagad payouts, automated courier dispatch and Meta ads tooling.";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title },
@@ -19,13 +19,18 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: Index,
+  component: Pricing,
 });
 
-function Index() {
+function Pricing() {
   useEffect(() => {
     initLandingScripts();
   }, []);
 
-  return <div className={landingBodyClass} dangerouslySetInnerHTML={{ __html: landingHtml }} />;
+  return (
+    <div
+      className={`${pricingBodyClass} bg-white`}
+      dangerouslySetInnerHTML={{ __html: pricingHtml }}
+    />
+  );
 }
