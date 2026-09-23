@@ -1,3 +1,5 @@
+import urShopLogo from "@/assets/URSHOP_Main_Logo.png.asset.json";
+
 // Markup ported from the provided design.
 export const landingBodyClass = "bg-[#FAFBFD] text-slate-900 antialiased selection:bg-brand-light selection:text-brand-dark relative overflow-x-hidden";
 export const landingBodyStyle = null;
@@ -14,7 +16,7 @@ export const landingHtml = `
 <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-3 pb-2">
 <div class="h-20 px-6 sm:px-8 flex items-center justify-between gap-4 rounded-full liquid-glass" style="min-height: 86px; border: 1.5px solid rgba(255, 255, 255, 0.85); box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.1), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95);">
 <div class="flex items-center gap-3">
-<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="#"><img alt="UrShop" class="h-10 w-auto object-contain drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1BVPOLuPQkCszQEiZdS48vseiWBWWiECEmVcuxm18A4JQLZee7AA2TyTilmDkFjFCSjUf4culb7QFfPOMhAPJIgZ579RYKM7OCS8MQRwUIFKP0LWBaNgpvDAmfLBDj91T7fQESsAKkLfLDJ_Rr8-lOaBm7uuLzqXSSrjGe7_nOvPO8xfhtkHjNBfmPGHZFbbSKnUN61cFGi5efsuyC7oPAC0OHt7DpWIi8Wpo_OIP8FJcV4X7-aYF9b31aiRvekBPrUI"></a>
+<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[150px] object-contain drop-shadow-sm" src="${urShopLogo.url}"></a>
 </div>
 <div class="flex items-center gap-4 sm:gap-6">
 <a class="text-sm sm:text-base font-bold text-slate-700 hover:text-slate-900 transition-colors px-3 py-1.5 rounded-full hover:bg-white/50" href="#">Log in</a>
@@ -70,11 +72,11 @@ export const landingHtml = `
 <!-- Sleek Liquid Capsule Input Box -->
 <div class="w-full rounded-full p-2 border mb-10 max-w-md mx-auto transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(224, 242, 254, 0.55) 100%); backdrop-filter: blur(24px) saturate(190%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.15), 0 2px 6px 0 rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(8, 192, 216, 0.08);">
 <form class="flex flex-col sm:flex-row items-center justify-between gap-2 pl-4 pr-1" onsubmit="event.preventDefault();">
-<div class="flex items-center w-full sm:w-auto px-2 py-2.5 bg-transparent rounded-full">
-<div class="flex items-center justify-start gap-1 select-none font-sans text-sm">
-<span class="text-slate-400 font-medium">your brand name</span>
+<div class="flex items-center w-full min-w-0 sm:w-auto px-2 py-2.5 bg-transparent rounded-full">
+<label class="flex min-w-0 items-center justify-start gap-1 font-sans text-sm" aria-label="Choose your UrShop address">
+<input class="brand-name-input min-w-0 w-32 sm:w-36 bg-transparent text-slate-700 font-medium outline-none placeholder:text-slate-400" type="text" name="brand-name" placeholder="your brand name" autocomplete="organization" aria-label="Brand name">
 <span class="text-brand font-bold tracking-tight">.urshop.app</span>
-</div>
+</label>
 </div>
 <button class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-white font-bold text-sm active:scale-95 transition-all border shadow-sm cursor-pointer" style="background: linear-gradient(135deg, rgba(8, 192, 216, 0.95), rgba(2, 132, 199, 0.95)); backdrop-filter: blur(14px); border-color: rgba(255, 255, 255, 0.6); box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.7);">
 <span class="">Start my Shop</span>
@@ -332,7 +334,9 @@ export const landingHtml = `
 </div>
 <div class="text-left md:text-right"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="testimonial-marquee" aria-label="Customer testimonials">
+<div class="testimonial-track">
+<div class="testimonial-set">
 <!-- Card 1 -->
 <div class="liquid-glass-card rounded-card p-7 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-glass-hover">
 <div>
@@ -364,6 +368,13 @@ export const landingHtml = `
 </div>
 <div class="flex items-center justify-between pt-4 border-t border-slate-100">
 <div class="flex items-center gap-3"><img alt="Farhan Akhtar" class="w-10 h-10 rounded-full object-cover border border-slate-200" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"><div><h4 class="text-sm font-bold text-slate-900">Farhan Akhtar</h4><p class="text-xs text-slate-500">Co-founder, ModestWear BD</p></div></div>
+</div>
+</div>
+</div>
+<div class="testimonial-set" aria-hidden="true">
+<div class="liquid-glass-card rounded-card p-7 flex flex-col justify-between"><div><p class="text-slate-700 text-sm leading-relaxed mb-6 font-normal">"We used to spend four hours every evening manually pasting customer addresses into Pathao and checking bKash transaction IDs. UrShop automated everything. Orders ship the same hour."</p></div><div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-3"><img alt="" class="w-10 h-10 rounded-full object-cover border border-slate-200" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"><div><h4 class="text-sm font-bold text-slate-900">Tanzeela Chowdhury</h4><p class="text-xs text-slate-500">Founder, Clay &amp; Loom</p></div></div></div></div>
+<div class="liquid-glass-card rounded-card p-7 flex flex-col justify-between"><div><p class="text-slate-700 text-sm leading-relaxed mb-6 font-normal">"Selling digital presets across Bangladesh used to fail because global platforms do not take bKash. UrShop let me launch my digital shop in 10 minutes and receive funds directly."</p></div><div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-3"><img alt="" class="w-10 h-10 rounded-full object-cover border border-slate-200" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"><div><h4 class="text-sm font-bold text-slate-900">Sabbir Hossain</h4><p class="text-xs text-slate-500">Creator, PixelCraft Assets</p></div></div></div></div>
+<div class="liquid-glass-card rounded-card p-7 flex flex-col justify-between"><div><p class="text-slate-700 text-sm leading-relaxed mb-6 font-normal">"Direct Steadfast &amp; RedX synchronization cut our courier return rate by 30%. Buyers receive automatic SMS notifications. It is genuinely the Shopify built for Bangladesh."</p></div><div class="flex items-center justify-between pt-4 border-t border-slate-100"><div class="flex items-center gap-3"><img alt="" class="w-10 h-10 rounded-full object-cover border border-slate-200" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"><div><h4 class="text-sm font-bold text-slate-900">Farhan Akhtar</h4><p class="text-xs text-slate-500">Co-founder, ModestWear BD</p></div></div></div></div>
 </div>
 </div>
 </div>
@@ -492,7 +503,7 @@ export const landingHtml = `
 <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-16">
 <!-- Column 1: Brand & Trust Block (md:col-span-4) -->
 <div class="md:col-span-4 flex flex-col items-start gap-5">
-<a class="inline-block" href="#"><img alt="UrShop" class="h-10 w-auto object-contain brightness-0 invert drop-shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwsb9saST-Mkfuvy-8FDPDjMNvuDCNL13THu_1tCgCpFefR7UPigkEy_n6cFLxfR1r0dauTzXX7bFXxF5X16PrbEsflNq8HHKQ5dJmcfI-JEPE2R1t1EczP0Zcw2MN6rESILyAsCxuGSjMFnPDS8P34CnAt3fe1fGslQm6zvmUWXPsLgXE6lw9zMQ6NO6LIWjwNr6avWR99V-pQsF1UkiqDRRRBjmqMgbY4kElwwQC6j2w9864sxlf3Kt6NkKo_voNAyU"></a>
+<a class="inline-block" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[160px] object-contain drop-shadow-sm" src="${urShopLogo.url}"></a>
 <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
           Empowering businesses and creators in Bangladesh to scale with ease. We provide the secure tools you need to build, grow, and automate your store.
         </p>
@@ -510,7 +521,7 @@ export const landingHtml = `
 <span class="text-[11px] font-bold tracking-widest text-slate-400 uppercase block mb-3">GET THE APP</span>
 <div class="flex flex-wrap items-center gap-3">
 <!-- Apple Store Button -->
-<a class="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-white/5 border border-white/15 hover:border-white/40 hover:bg-white/10 transition-colors text-white text-left" href="#">
+<a class="inline-flex w-36 items-center gap-2.5 px-3.5 py-2 rounded-lg bg-white/5 border border-white/15 hover:border-white/40 hover:bg-white/10 transition-colors text-white text-left" href="#">
 <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.61 1.34-.55.63-1.03 1.66-.9 2.68 1 .08 2.02-.51 2.58-1.17z"></path>
 </svg>
@@ -520,7 +531,7 @@ export const landingHtml = `
 </div>
 </a>
 <!-- Google Play Button -->
-<a class="inline-flex items-center gap-2.5 px-3.5 py-2 rounded-lg bg-white/5 border border-white/15 hover:border-white/40 hover:bg-white/10 transition-colors text-white text-left" href="#">
+<a class="inline-flex w-36 items-center gap-2.5 px-3.5 py-2 rounded-lg bg-white/5 border border-white/15 hover:border-white/40 hover:bg-white/10 transition-colors text-white text-left" href="#">
 <svg class="w-6 h-6 fill-current text-white" viewBox="0 0 24 24">
 <path d="M3.609 1.814L13.792 12 3.61 22.186a2.124 2.124 0 0 1-.61-1.516V3.33c0-.58.225-1.127.609-1.516zm11.238 11.241l2.456 2.456-11.83 6.76 9.374-9.216zm2.456-4.055L14.847 11.45 5.473 2.234l11.83 6.766zm1.096 1.096l2.951 1.686c.92.525.92 1.383 0 1.908l-2.951 1.686-2.186-2.64 2.186-2.64z"></path>
 </svg>

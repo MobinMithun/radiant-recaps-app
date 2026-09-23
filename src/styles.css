@@ -268,6 +268,54 @@ body {
   display: inline;
 }
 
+.brand-name-input::placeholder {
+  opacity: 1;
+}
+
+.testimonial-marquee {
+  width: 100%;
+  overflow: hidden;
+  padding-block: 0.5rem 1.5rem;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.testimonial-track {
+  display: flex;
+  width: max-content;
+  animation: testimonial-scroll 42s linear infinite;
+}
+
+.testimonial-set {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: min(1000px, calc(100vw - 3rem));
+  padding-right: 1.5rem;
+}
+
+.testimonial-marquee:hover .testimonial-track {
+  animation-play-state: paused;
+}
+
+@keyframes testimonial-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .testimonial-set {
+    grid-template-columns: repeat(3, minmax(280px, 82vw));
+    width: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track {
+    animation: none;
+  }
+}
+
 /* Ambient flowing iridescent fluid aurora background */
 .aurora-bg {
   position: absolute;
