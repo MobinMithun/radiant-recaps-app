@@ -253,6 +253,99 @@ body {
   transform: translateY(-1px);
 }
 
+.liquid-metal-button {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  color: white;
+  background: linear-gradient(120deg, #08c0d8 0%, #04aecd 42%, #0284c7 100%);
+  box-shadow:
+    0 10px 26px -7px rgba(2, 132, 199, 0.48),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.72),
+    inset 0 -2px 4px rgba(3, 105, 161, 0.24);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.liquid-metal-button::before {
+  position: absolute;
+  z-index: -1;
+  inset: 1px 12% 48%;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), transparent);
+  content: "";
+  pointer-events: none;
+}
+
+.liquid-metal-button:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.1) brightness(1.04);
+  box-shadow:
+    0 14px 30px -7px rgba(2, 132, 199, 0.55),
+    inset 0 1.5px 2px rgba(255, 255, 255, 0.82),
+    inset 0 -2px 4px rgba(3, 105, 161, 0.2);
+}
+
+.liquid-metal-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.liquid-metal-button:focus-visible {
+  outline: 3px solid rgba(8, 192, 216, 0.35);
+  outline-offset: 3px;
+}
+
+.liquid-metal-button-icon {
+  width: 48px;
+  padding: 0;
+}
+
+.liquid-metal-button-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+#comparison-section thead th {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(20px);
+}
+
+#comparison-section thead th:nth-child(4) {
+  background-color: rgba(236, 254, 255, 0.96);
+}
+
+@media (max-width: 767px) {
+  #comparison-section .comparison-table-scroll {
+    overflow-x: auto;
+  }
+}
+
+.book-calendar-button {
+  box-sizing: border-box;
+  width: 8.875rem;
+  height: 2.875rem;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liquid-metal-button {
+    transition: none;
+  }
+}
+
 .liquid-pill {
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(16px);
@@ -277,6 +370,25 @@ body {
   overflow: hidden;
   padding-block: 0.5rem 1.5rem;
   mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.hero-earning-badge {
+  animation: hero-badge-float 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+.hero-earning-badge-right {
+  animation-delay: -2.5s;
+}
+
+@keyframes hero-badge-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -12px;
+  }
 }
 
 .testimonial-track {
@@ -314,6 +426,11 @@ body {
   .testimonial-track {
     animation: none;
   }
+
+  .hero-earning-badge {
+    animation: none;
+  }
+
 }
 
 /* Ambient flowing iridescent fluid aurora background */

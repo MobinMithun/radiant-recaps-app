@@ -33,7 +33,7 @@ export const pricingHtml = `
 <!-- Local Tax Disclaimer Pill -->
 
 <!-- Liquid Glass Billing Frequency Toggle Capsule -->
-<div class="relative p-1 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-sm flex items-center gap-1.5"><button class="relative px-6 py-2 rounded-full text-sm font-bold transition-all duration-200 text-white flex items-center gap-1.5 active:scale-95" id="billing-monthly-btn" onclick="setBilling('monthly')" style="background: linear-gradient(135deg, rgb(8, 192, 216) 0%, rgb(2, 132, 199) 100%); box-shadow: rgba(8, 192, 216, 0.35) 0px 4px 14px, rgba(255, 255, 255, 0.8) 0px 1px 1.5px inset; border: 1px solid rgba(255, 255, 255, 0.6);"><span class="">Monthly</span></button><button class="relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/50 flex items-center gap-2" id="billing-yearly-btn" onclick="setBilling('yearly')"><span class="">Yearly</span><span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold shadow-xs">Save 20%</span></button></div>
+<div class="relative p-1 rounded-full bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-sm flex items-center gap-1.5"><button class="relative px-6 py-2 rounded-full text-sm font-bold transition-all duration-200 glass-btn-primary text-slate-900 flex items-center gap-1.5 active:scale-95" id="billing-monthly-btn" onclick="setBilling('monthly')"><span class="">Monthly</span></button><button class="relative px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 text-slate-600 hover:text-slate-900 hover:bg-white/50 flex items-center gap-2" id="billing-yearly-btn" onclick="setBilling('yearly')"><span class="">Yearly</span><span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold shadow-xs">Save 20%</span></button></div>
 </div>
 <!-- 4-TIER PRICING CARDS -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-16 relative z-10">
@@ -42,7 +42,6 @@ export const pricingHtml = `
 <div>
 <div class="flex items-center justify-between mb-2">
 <h2 class="text-xl font-bold text-slate-900">Free Trial</h2>
-<span class="px-2.5 py-0.5 rounded-full bg-white/80 border border-slate-200/90 text-[11px] font-semibold text-slate-600 shadow-xs">Sandbox</span>
 </div>
 <p class="text-[13px] text-slate-600 min-h-[38px] mb-5 leading-snug">
             For new and small stores exploring online sales.
@@ -99,7 +98,6 @@ export const pricingHtml = `
 <div>
 <div class="flex items-center justify-between mb-2">
 <h2 class="text-xl font-bold text-slate-900">Starter</h2>
-<span class="px-2.5 py-0.5 rounded-full bg-cyan-50/90 border border-cyan-200 text-[11px] font-bold text-[#08C0D8] shadow-xs">Scale Up</span>
 </div>
 <p class="text-[13px] text-slate-600 min-h-[38px] mb-5 leading-snug">
             For growing e-commerce businesses scaling sales.
@@ -172,7 +170,6 @@ export const pricingHtml = `
 <div>
 <div class="flex items-center justify-between mb-2 pt-1">
 <h2 class="text-xl font-bold text-[#08C0D8]">Growth</h2>
-<span class="px-2.5 py-0.5 rounded-full bg-cyan-100/90 text-[11px] font-bold text-[#08C0D8] border border-cyan-200">Recommended</span>
 </div>
 <p class="text-[13px] text-slate-600 min-h-[38px] mb-5 leading-snug">
             For expanding stores needing automation &amp; marketing.
@@ -242,7 +239,6 @@ export const pricingHtml = `
 <div>
 <div class="flex items-center justify-between mb-2">
 <h2 class="text-xl font-bold text-slate-900">Scale</h2>
-<span class="px-2.5 py-0.5 rounded-full bg-white/80 border border-slate-200/90 text-[11px] font-semibold text-slate-600 shadow-xs">Enterprise</span>
 </div>
 <p class="text-[13px] text-slate-600 min-h-[38px] mb-5 leading-snug">
             For established brands and high-volume sellers.
@@ -295,7 +291,7 @@ export const pricingHtml = `
 <!-- PARTNER INTEGRATION TRUST STRIP -->
 
 <!-- FULL FEATURE COMPARISON TABLE -->
-<div class="liquid-glass overflow-hidden mb-16 relative z-10" id="comparison-section">
+<div class="liquid-glass mb-16 relative z-10" id="comparison-section">
 <!-- Table Top Controls Header -->
 <div class="p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200/80">
 <div>
@@ -311,9 +307,9 @@ export const pricingHtml = `
 </label>
 </div>
 <!-- Sticky Comparison Header Bar & Columns -->
-<div class="overflow-x-auto">
+<div class="comparison-table-scroll">
 <table class="w-full text-left text-sm border-collapse">
-<thead class="sticky top-16 z-30 bg-white/85 backdrop-blur-2xl border-b border-slate-200/80 shadow-xs"><tr class=""><th class="p-4 sm:p-5 text-xs uppercase tracking-wider text-slate-600 font-bold w-2/5">Features</th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Free Trial</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Start Free</a></th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Starter</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Select</a></th><th class="p-4 sm:p-5 text-center w-[15%] bg-cyan-50/70 border-x border-cyan-200/80"><div class="flex items-center justify-center gap-1 font-bold text-[#08C0D8]"><span class="">Growth</span><span class="material-symbols-outlined text-[15px]">stars</span></div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-white shadow-sm active:scale-95 transition-all border" style="background: linear-gradient(135deg, rgb(8, 192, 216) 0%, rgb(2, 132, 199) 100%); border-color: rgba(255, 255, 255, 0.65); box-shadow: rgba(8, 192, 216, 0.35) 0px 4px 14px, rgba(255, 255, 255, 0.7) 0px 1px 1px inset;" href="#">Upgrade</a></th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Scale</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Select</a></th></tr></thead>
+<thead class="bg-white/90 backdrop-blur-2xl border-b border-slate-200/80 shadow-xs"><tr class=""><th class="p-4 sm:p-5 text-xs uppercase tracking-wider text-slate-600 font-bold w-2/5">Features</th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Free Trial</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Start Free</a></th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Starter</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Select</a></th><th class="p-4 sm:p-5 text-center w-[15%] bg-cyan-50/70 border-x border-cyan-200/80"><div class="flex items-center justify-center gap-1 font-bold text-[#08C0D8]"><span class="">Growth</span><span class="material-symbols-outlined text-[15px]">stars</span></div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-white shadow-sm active:scale-95 transition-all border" style="background: linear-gradient(135deg, rgb(8, 192, 216) 0%, rgb(2, 132, 199) 100%); border-color: rgba(255, 255, 255, 0.65); box-shadow: rgba(8, 192, 216, 0.35) 0px 4px 14px, rgba(255, 255, 255, 0.7) 0px 1px 1px inset;" href="#">Upgrade</a></th><th class="p-4 sm:p-5 text-center w-[15%]"><div class="font-bold text-slate-900">Scale</div><a class="mt-2 inline-block text-xs font-bold px-4 py-1.5 rounded-full text-slate-700 hover:text-slate-900 border transition-all active:scale-95 hover:bg-white/90" style="background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-color: rgba(255, 255, 255, 0.95); box-shadow: rgba(15, 23, 42, 0.05) 0px 2px 8px, rgba(255, 255, 255, 0.95) 0px 1px 1px inset;" href="#">Select</a></th></tr></thead>
 <tbody>
 <!-- CATEGORY 1: GENERAL & STORE BUILDER -->
 <tr class="bg-slate-100/50 border-t border-b border-slate-200/70">

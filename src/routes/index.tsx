@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { createRoot } from "react-dom/client";
 import { useEffect } from "react";
 
+import MetallicButton from "@/components/ui/metallic-button";
 import { landingBodyClass, landingHtml } from "@/lib/landing-html";
 import { initLandingScripts } from "@/lib/landing-scripts";
 
@@ -25,6 +27,36 @@ export const Route = createFileRoute("/")({
 function Index() {
   useEffect(() => {
     initLandingScripts();
+
+    const mounts = [
+      {
+        id: "start-my-shop-button-mount",
+        label: "Start my Shop",
+      },
+      {
+        id: "start-free-trial-button-mount",
+        label: "Start Free Trial",
+      },
+    ];
+
+    const roots = mounts.flatMap(({ id, label }) => {
+      const element = document.getElementById(id);
+      if (!element) return [];
+
+      const root = createRoot(element);
+      root.render(
+        <MetallicButton
+          label={label}
+          baseColor="#08c0d8"
+          sheenColor="#ffffff"
+          className="w-full sm:w-auto"
+          onClick={() => window.location.assign("/pricing")}
+        />,
+      );
+      return [root];
+    });
+
+    return () => roots.forEach((root) => root.unmount());
   }, []);
 
   return <div className={landingBodyClass} dangerouslySetInnerHTML={{ __html: landingHtml }} />;

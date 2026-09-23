@@ -16,11 +16,11 @@ export const landingHtml = `
 <div class="max-w-5xl mx-auto px-4 sm:px-6 pt-3 pb-2">
 <div class="h-20 px-6 sm:px-8 flex items-center justify-between gap-4 rounded-full liquid-glass" style="min-height: 86px; border: 1.5px solid rgba(255, 255, 255, 0.85); box-shadow: 0 10px 30px -10px rgba(2, 132, 199, 0.1), inset 0 1.5px 2px 0 rgba(255, 255, 255, 0.95);">
 <div class="flex items-center gap-3">
-<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[150px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
+<a class="flex items-center transition-transform hover:scale-[1.02] active:scale-95" href="/"><img alt="UrShop" class="h-20 w-auto max-w-[300px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
 </div>
 <div class="flex items-center gap-4 sm:gap-6">
 <a class="text-sm sm:text-base font-bold text-slate-700 hover:text-slate-900 transition-colors px-3 py-1.5 rounded-full hover:bg-white/50" href="#">Log in</a>
-<a class="inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-bold text-sm sm:text-base transition-all duration-300 active:scale-95 hover:shadow-lg border" href="#" style="background: linear-gradient(135deg, rgba(8, 192, 216, 0.96), rgba(2, 132, 199, 0.96)); backdrop-filter: blur(14px); border-color: rgba(255, 255, 255, 0.65); box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.75);">
+<a class="inline-flex items-center justify-center px-7 py-2.5 rounded-full text-white font-bold text-sm sm:text-base transition-all duration-300 active:scale-95 hover:shadow-lg border" href="/pricing" style="background: linear-gradient(135deg, rgba(8, 192, 216, 0.96), rgba(2, 132, 199, 0.96)); backdrop-filter: blur(14px); border-color: rgba(255, 255, 255, 0.65); box-shadow: 0 8px 24px -4px rgba(2, 132, 199, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.75);">
           Sign up
         </a>
 </div>
@@ -32,7 +32,7 @@ export const landingHtml = `
 <section class="relative w-full pt-16 pb-28 px-6 lg:px-12 overflow-hidden">
 <div class="max-w-4xl mx-auto relative flex flex-col items-center text-center">
 <!-- Left Floating Liquid Jewel Badge -->
-<div class="hidden xl:flex absolute top-10 -left-12 items-center gap-4 px-6 py-3.5 rounded-full transition-all duration-300 hover:rotate-0 hover:scale-105 pointer-events-none z-10" style="transform: rotate(-3deg); background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 20px 45px -12px rgba(2, 132, 199, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
+<div class="hero-earning-badge hero-earning-badge-left hidden xl:flex absolute top-10 -left-12 items-center gap-4 px-6 py-3.5 rounded-full transition-all duration-300 hover:rotate-0 hover:scale-105 pointer-events-none z-10" style="transform: rotate(-3deg); background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 20px 45px -12px rgba(2, 132, 199, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
 <div class="relative shrink-0">
 <div class="w-12 h-12 rounded-full bg-[#E0F2FE] flex items-center justify-center overflow-hidden ring-2 ring-white shadow-inner"><img alt="Apparel store avatar" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"></div>
 <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs ring-2 ring-white">🛍️</div>
@@ -43,7 +43,7 @@ export const landingHtml = `
 </div>
 </div>
 <!-- Right Floating Liquid Jewel Badge -->
-<div class="hidden xl:flex absolute top-10 -right-12 items-center gap-4 px-6 py-3.5 rounded-full transition-all duration-300 hover:rotate-0 hover:scale-105 pointer-events-none z-10" style="transform: rotate(3deg); background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 20px 45px -12px rgba(2, 132, 199, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
+<div class="hero-earning-badge hero-earning-badge-right hidden xl:flex absolute top-10 -right-12 items-center gap-4 px-6 py-3.5 rounded-full transition-all duration-300 hover:rotate-0 hover:scale-105 pointer-events-none z-10" style="transform: rotate(3deg); background: rgba(255, 255, 255, 0.76); backdrop-filter: blur(24px) saturate(180%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 20px 45px -12px rgba(2, 132, 199, 0.16), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
 <div class="relative shrink-0">
 <div class="w-12 h-12 rounded-full bg-[#FEF3C7] flex items-center justify-center overflow-hidden ring-2 ring-white shadow-inner"><img alt="Digital creator avatar" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"></div>
 <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs ring-2 ring-white">💻</div>
@@ -70,7 +70,7 @@ export const landingHtml = `
     The simplest way for online shops to manage orders and delivery.
   </p>
 <!-- Sleek Liquid Capsule Input Box -->
-<div class="w-full rounded-full p-2 border mb-10 max-w-md mx-auto transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(224, 242, 254, 0.55) 100%); backdrop-filter: blur(24px) saturate(190%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.15), 0 2px 6px 0 rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(8, 192, 216, 0.08);">
+<div class="mt-8 sm:mt-12 w-full rounded-full p-2 border mb-10 max-w-md mx-auto transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(224, 242, 254, 0.55) 100%); backdrop-filter: blur(24px) saturate(190%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.15), 0 2px 6px 0 rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(8, 192, 216, 0.08);">
 <form class="flex flex-col sm:flex-row items-center justify-between gap-2 pl-4 pr-1" onsubmit="event.preventDefault();">
 <div class="flex items-center w-full min-w-0 sm:w-auto px-2 py-2.5 bg-transparent rounded-full">
 <label class="flex min-w-0 items-center justify-start gap-1 font-sans text-sm" aria-label="Choose your UrShop address">
@@ -78,9 +78,7 @@ export const landingHtml = `
 <span class="text-brand font-bold tracking-tight">.urshop.app</span>
 </label>
 </div>
-<button class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-white font-bold text-sm active:scale-95 transition-all border shadow-sm cursor-pointer" style="background: linear-gradient(135deg, rgba(8, 192, 216, 0.95), rgba(2, 132, 199, 0.95)); backdrop-filter: blur(14px); border-color: rgba(255, 255, 255, 0.6); box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.4), inset 0 1.5px 2px rgba(255, 255, 255, 0.7);">
-<span class="">Start my Shop</span>
-</button>
+<span id="start-my-shop-button-mount" class="inline-flex w-full sm:w-auto"></span>
 </form>
 </div>
 </div>
@@ -485,10 +483,8 @@ export const landingHtml = `
         Skip the complex setup. We handle the payments, delivery, and support so you can focus on creating.
       </p>
 <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-white font-bold text-base active:scale-95 transition-all duration-300 border hover:shadow-xl" href="#" style="background: linear-gradient(135deg, rgba(8, 192, 216, 0.96), rgba(2, 132, 199, 0.96)); backdrop-filter: blur(14px); border-color: rgba(255, 255, 255, 0.6); box-shadow: 0 10px 24px -4px rgba(2, 132, 199, 0.42), inset 0 1.5px 2px rgba(255, 255, 255, 0.75);">
-          Start Free Trial
-        </a>
-<a class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-slate-800 font-semibold text-base transition-all duration-300 border hover:bg-white/80 active:scale-95" href="#" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
+<span id="start-free-trial-button-mount" class="inline-flex w-full sm:w-auto"></span>
+<a class="book-calendar-button w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-slate-800 font-semibold text-base transition-all duration-300 border hover:bg-white/80 active:scale-95" href="#" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
           Book Calendar
         </a>
 </div>
@@ -503,7 +499,7 @@ export const landingHtml = `
 <div class="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 pb-16">
 <!-- Column 1: Brand & Trust Block (md:col-span-4) -->
 <div class="md:col-span-4 flex flex-col items-start gap-5">
-<a class="inline-block" href="/"><img alt="UrShop" class="h-12 w-auto max-w-[160px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
+<a class="inline-block" href="/"><img alt="UrShop" class="h-20 w-auto max-w-[280px] object-contain drop-shadow-sm" src="${urShopLogo}"></a>
 <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
           Empowering businesses and creators in Bangladesh to scale with ease. We provide the secure tools you need to build, grow, and automate your store.
         </p>
