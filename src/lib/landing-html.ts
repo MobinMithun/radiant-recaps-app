@@ -560,7 +560,7 @@ export const landingHtml = `
 <a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Terms of Service</a>
 <a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Security Policy</a>
 <a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Withdrawal Policy</a>
-<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Pricing</a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="/pricing">Pricing</a>
 <a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">Refund Policy</a>
 </div>
 <!-- Column 4: Contact & Addresses & Socials (md:col-span-3) -->
