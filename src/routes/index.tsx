@@ -78,7 +78,72 @@ function Index() {
       roots.push(titleRoot);
     }
 
-    return () => roots.forEach((root) => root.unmount());
+    const siteNavigation = document.getElementById("site-navigation");
+    const siteFooter = document.querySelector("footer");
+    const footerObserver =
+      siteNavigation && siteFooter
+        ? new IntersectionObserver(
+            ([entry]) => {
+              const hideNavigation = entry.isIntersecting;
+              siteNavigation.classList.toggle("nav-hidden-near-footer", hideNavigation);
+              siteNavigation.toggleAttribute("inert", hideNavigation);
+            },
+            { rootMargin: "0px 0px 280px 0px", threshold: 0 },
+          )
+        : null;
+    if (siteFooter) footerObserver?.observe(siteFooter);
+
+    const alignHowItWorksPath = () => {
+      const titleBlock = document.querySelector<HTMLElement>(".how-it-works-title-block");
+      const line = document.querySelector<HTMLElement>(".how-it-works-data-line");
+      const points = Array.from(
+        document.querySelectorAll<HTMLElement>(".how-it-works-data-point"),
+      );
+      if (!titleBlock || !line || points.length !== 3) return;
+
+      const titleRect = titleBlock.getBoundingClientRect();
+      const lineRect = line.getBoundingClientRect();
+      const titleCenter = titleRect.left + titleRect.width / 2;
+      const pointCenters = points.map((point) => {
+        const rect = point.getBoundingClientRect();
+        return { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 };
+      });
+      const middleCenter = pointCenters[1];
+      if (!middleCenter || lineRect.width === 0) return;
+
+      titleBlock.style.setProperty(
+        "--title-connector-left",
+        `${middleCenter.x - titleRect.left}px`,
+      );
+      line.style.setProperty("--packet-start-left", `${titleCenter - lineRect.left - 3.5}px`);
+      line.style.setProperty("--packet-start-top", `${titleRect.bottom - lineRect.top - 3.5}px`);
+      line.style.setProperty("--packet-rail-top", `${lineRect.height / 2 - 3.5}px`);
+
+      pointCenters.forEach((center, index) => {
+        line.style.setProperty(`--packet-${index}-left`, `${center.x - lineRect.left - 3.5}px`);
+        line.style.setProperty(`--packet-${index}-top`, `${center.y - lineRect.top - 3.5}px`);
+      });
+    };
+
+    alignHowItWorksPath();
+    const pathResizeObserver = new ResizeObserver(alignHowItWorksPath);
+    const titleBlock = document.querySelector(".how-it-works-title-block");
+    const dataLine = document.querySelector(".how-it-works-data-line");
+    if (titleBlock) pathResizeObserver.observe(titleBlock);
+    if (dataLine) pathResizeObserver.observe(dataLine);
+    document.querySelectorAll(".how-it-works-data-point").forEach((point) => {
+      pathResizeObserver.observe(point);
+    });
+    window.addEventListener("resize", alignHowItWorksPath);
+
+    return () => {
+      pathResizeObserver.disconnect();
+      footerObserver?.disconnect();
+      siteNavigation?.classList.remove("nav-hidden-near-footer");
+      siteNavigation?.removeAttribute("inert");
+      window.removeEventListener("resize", alignHowItWorksPath);
+      roots.forEach((root) => root.unmount());
+    };
   }, []);
 
   return <div className={landingBodyClass} dangerouslySetInnerHTML={{ __html: landingHtml }} />;
