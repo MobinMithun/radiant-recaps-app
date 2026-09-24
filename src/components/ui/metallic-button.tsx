@@ -707,8 +707,12 @@ export function MetallicButton({
   reducedMotionRef.current = reducedMotion;
 
   const isIcon = viewMode === "icon";
-  const shellSize = isIcon ? "h-11.5 w-11.5" : "h-11.5 w-35.5";
-  const faceSize = isIcon ? "h-10.5 w-10.5" : "h-10.5 w-34.5";
+  const shellSize = isIcon
+    ? "h-11.5 w-11.5"
+    : "h-11.5 w-35.5 mobile-full-width-shell";
+  const faceSize = isIcon
+    ? "h-10.5 w-10.5"
+    : "h-10.5 w-34.5 mobile-full-width-face";
   const pressShift = isPressed
     ? "translate-y-px scale-[0.98]"
     : "translate-y-0 scale-100";

@@ -665,3 +665,278 @@ body {
   filter: blur(100px);
   border-radius: 50%;
 }
+
+/* Mobile layout fixes for the landing and pricing pages. */
+@media (max-width: 767px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  #site-navigation > div {
+    padding-inline: 0.75rem;
+    padding-top: 0.5rem;
+  }
+
+  #site-navigation > div > div.liquid-glass {
+    min-height: 64px !important;
+    height: 64px;
+    padding-inline: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  #site-navigation img {
+    width: auto;
+    height: 3.25rem;
+    max-width: min(42vw, 170px);
+  }
+
+  #site-navigation > div > div.liquid-glass > div:last-child {
+    gap: 0.35rem;
+    flex-shrink: 0;
+  }
+
+  #site-navigation a {
+    white-space: nowrap;
+  }
+
+  #site-navigation > div > div.liquid-glass > div:last-child > a {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  #site-navigation > div > div.liquid-glass > div:last-child > a:first-child {
+    padding-inline: 0.5rem;
+  }
+
+  main {
+    min-width: 0;
+  }
+
+  .liquid-metal-button {
+    min-height: 48px;
+    width: 100%;
+    touch-action: manipulation;
+  }
+
+  #start-my-shop-button-mount,
+  #start-free-trial-button-mount {
+    display: flex;
+    width: 100%;
+  }
+
+  .hero-signup-capsule {
+    width: calc(100% - 1rem);
+    max-width: none;
+    padding: 0.5rem;
+    border-radius: 999px;
+  }
+
+  .hero-signup-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.25rem;
+    padding: 0 0.2rem 0 0.6rem;
+  }
+
+  .hero-signup-form > div {
+    width: auto;
+    min-width: 0;
+    flex: 1 1 auto;
+    min-height: 46px;
+    padding-inline: 0.1rem;
+    justify-content: flex-start;
+  }
+
+  .hero-signup-form label {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.1rem;
+    font-size: clamp(0.68rem, 3.15vw, 0.85rem);
+  }
+
+  .brand-name-input {
+    width: auto;
+    flex: 0 1 9.5rem;
+    min-width: 0;
+    max-width: 9.5rem;
+    font-size: clamp(0.78rem, 3.4vw, 0.9rem);
+  }
+
+  .hero-signup-form label > span {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .hero-signup-form #start-my-shop-button-mount {
+    display: flex;
+    width: auto;
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+
+  .hero-signup-form #start-my-shop-button-mount > div,
+  .hero-signup-form .liquid-metal-button {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .hero-signup-form .liquid-metal-button {
+    min-height: 44px;
+    border-radius: 999px;
+    padding-inline: 0.8rem;
+  }
+
+  .hero-signup-form .liquid-metal-button > span {
+    font-size: 0.78rem;
+  }
+
+  /* Keep the billing switch compact and reliably tappable. */
+  #billing-monthly-btn,
+  #billing-yearly-btn {
+    min-height: 44px;
+    justify-content: center;
+    padding: 0.65rem 0.75rem;
+    gap: 0.35rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+  }
+
+  #billing-yearly-btn > span:last-child {
+    padding-inline: 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  #faq-tab-container {
+    width: max-content;
+    max-width: none;
+  }
+
+  #faq-tab-container .faq-tab-btn {
+    min-height: 44px;
+    padding-inline: 0.9rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+  }
+
+  #comparison-section {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #comparison-section table {
+    min-width: 760px;
+  }
+
+  .comparison-table-scroll {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #comparison-section .comparison-table-scroll a {
+    min-height: 40px;
+    white-space: nowrap;
+  }
+
+  #comparison-section > div:last-child > a {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  #comparison-section > div:last-child > div {
+    align-items: flex-start;
+  }
+
+  .testimonial-set {
+    grid-template-columns: repeat(3, minmax(260px, 82vw));
+  }
+}
+
+@media (max-width: 767px) {
+  .closing-cta-actions {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  #start-free-trial-button-mount {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    align-self: stretch;
+  }
+
+  #start-free-trial-button-mount > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  #start-free-trial-button-mount .mobile-full-width-shell,
+  #start-free-trial-button-mount .mobile-full-width-face,
+  #start-free-trial-button-mount .liquid-metal-button {
+    width: 100%;
+  }
+
+  #start-free-trial-button-mount .liquid-metal-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .book-calendar-button {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+    height: 46px;
+    min-width: 0;
+    align-self: stretch;
+    box-sizing: border-box;
+    padding-inline: 0.5rem;
+    white-space: nowrap;
+    touch-action: manipulation;
+  }
+
+  #site-navigation > div > div.liquid-glass {
+    padding-inline: 0.55rem;
+  }
+
+  #site-navigation img {
+    max-width: 38vw;
+  }
+
+  #site-navigation > div > div.liquid-glass > div:last-child > a {
+    padding-inline: 0.55rem;
+  }
+
+  #site-navigation > div > div.liquid-glass > div:last-child > a:first-child {
+    font-size: 0.75rem;
+  }
+
+  .hero-earning-badge {
+    display: none !important;
+  }
+
+  .faq-tab-btn {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding-inline: 0.85rem !important;
+    white-space: nowrap;
+    touch-action: manipulation;
+  }
+
+  #faqs .overflow-x-auto {
+    justify-content: flex-start;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .faq-tab-btn {
+    scroll-snap-align: start;
+  }
+}

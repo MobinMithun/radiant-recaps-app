@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { useEffect } from "react";
 
 import MetallicButton from "@/components/ui/metallic-button";
+import { LocationMap } from "@/components/ui/expand-map";
 import { DiaText } from "@/components/dia-text";
 import { landingBodyClass, landingHtml } from "@/lib/landing-html";
 import { initLandingScripts } from "@/lib/landing-scripts";
@@ -56,6 +57,19 @@ function Index() {
       );
       return [root];
     });
+
+    const locationMapElement = document.getElementById("footer-location-map");
+    if (locationMapElement) {
+      const locationMapRoot = createRoot(locationMapElement);
+      locationMapRoot.render(
+        <LocationMap
+          location="Dhaka, Bangladesh"
+          coordinates="23.8103° N, 90.4125° E"
+          className="max-w-[280px]"
+        />,
+      );
+      roots.push(locationMapRoot);
+    }
 
     const titleElement = document.getElementById("hero-title-mount");
     if (titleElement) {

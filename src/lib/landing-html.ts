@@ -68,8 +68,8 @@ export const landingHtml = `
     The simplest way for online shops to manage orders and delivery.
   </p>
 <!-- Sleek Liquid Capsule Input Box -->
-<div class="mt-8 sm:mt-12 w-full rounded-full p-2 border mb-10 max-w-md mx-auto transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(224, 242, 254, 0.55) 100%); backdrop-filter: blur(24px) saturate(190%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.15), 0 2px 6px 0 rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(8, 192, 216, 0.08);">
-<form class="flex flex-col sm:flex-row items-center justify-between gap-2 pl-4 pr-1" onsubmit="event.preventDefault();">
+<div class="hero-signup-capsule mt-8 sm:mt-12 w-full rounded-full p-2 border mb-10 max-w-md mx-auto transition-all duration-300 hover:shadow-2xl" style="background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(240, 249, 255, 0.75) 50%, rgba(224, 242, 254, 0.55) 100%); backdrop-filter: blur(24px) saturate(190%); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 16px 36px -8px rgba(2, 132, 199, 0.15), 0 2px 6px 0 rgba(0, 0, 0, 0.04), inset 0 1.5px 2px rgba(255, 255, 255, 1), inset 0 -2px 6px rgba(8, 192, 216, 0.08);">
+<form class="hero-signup-form flex flex-col sm:flex-row items-center justify-between gap-2 pl-4 pr-1" onsubmit="event.preventDefault();">
 <div class="flex items-center w-full min-w-0 sm:w-auto px-2 py-2.5 bg-transparent rounded-full">
 <label class="flex min-w-0 items-center justify-start gap-1 font-sans text-sm" aria-label="Choose your UrShop address">
 <input class="brand-name-input min-w-0 w-32 sm:w-36 bg-transparent text-slate-700 font-medium outline-none placeholder:text-slate-400" type="text" name="brand-name" placeholder="your brand name" autocomplete="organization" aria-label="Brand name">
@@ -475,7 +475,7 @@ export const landingHtml = `
 <p class="text-slate-600 text-sm sm:text-base mb-10 max-w-lg leading-relaxed">
         Skip the complex setup. We handle the payments, delivery, and support so you can focus on creating.
       </p>
-<div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+<div class="closing-cta-actions flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
 <span id="start-free-trial-button-mount" class="inline-flex w-full sm:w-auto"></span>
 <a class="book-calendar-button w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-full text-slate-800 font-bold text-sm transition-all duration-300 border hover:bg-white/80 active:scale-95" href="#" style="background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(16px); border: 1.5px solid rgba(255, 255, 255, 0.95); box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), inset 0 1.5px 2px rgba(255, 255, 255, 1);">
           Book Calendar
@@ -515,7 +515,7 @@ export const landingHtml = `
 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 0.93-2.85-.9.04-1.99.6-2.61 1.34-.55.63-1.03 1.66-.9 2.68 1 .08 2.02-.51 2.58-1.17z"></path>
 </svg>
 <div class="leading-none">
-<span class="block text-[9px] uppercase tracking-wider text-slate-400 font-sans">Download on the</span>
+<span class="block text-[9px] uppercase tracking-wider text-slate-400 font-sans">Download on</span>
 <span class="block text-xs font-bold text-white font-sans mt-0.5">App Store</span>
 </div>
 </a>
@@ -567,20 +567,7 @@ export const landingHtml = `
 <div class="md:col-span-3 flex flex-col gap-6">
 <div>
 <span class="text-sm font-bold text-white mb-3 block">Contact</span>
-<div class="space-y-4 text-xs">
-<div>
-<p class="font-bold uppercase tracking-wider text-slate-300 mb-1">USA HEADQUARTERS</p>
-<p class="text-slate-400 leading-relaxed">
-                1209 Mountain Road PL NE, Ste N<br>Albuquerque, NM 87110<br>United States
-              </p>
-</div>
-<div>
-<p class="font-bold uppercase tracking-wider text-slate-300 mb-1">BANGLADESH OFFICE</p>
-<p class="text-slate-400 leading-relaxed">
-                52, Khanpur Road,<br>Narayanganj, Dhaka,<br>Bangladesh
-              </p>
-</div>
-</div>
+<div id="footer-location-map" class="w-full max-w-[280px] min-h-[140px]" aria-label="UrShop Bangladesh location map"></div>
 </div>
 <!-- Prominent Email -->
 <div class="pt-1">
@@ -613,24 +600,13 @@ export const landingHtml = `
 </div>
 </div>
 <!-- Divider Line -->
-<div class="border-t border-white/10 pt-10 pb-4 text-center">
+<div class="border-t border-white/10 pt-10 pb-4 text-left">
 <p class="text-[11px] font-bold font-mono tracking-[0.2em] text-slate-400 uppercase">
         PAYMENTS 100% SECURED BY SSLCOMMERZ &amp; EPS
       </p>
 </div>
-<!-- Bottom Security, Payment Rails & Copyright Rail -->
+<!-- Bottom Payment Rails & Copyright Rail -->
 <div class="flex flex-col lg:flex-row items-center justify-between gap-6 pt-4 pb-4">
-<!-- Left: Security badges -->
-<div class="flex items-center gap-3 shrink-0 order-2 lg:order-1">
-<div class="inline-flex items-center gap-2 px-2.5 py-1.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300 font-semibold">
-<span class="px-1.5 py-0.5 rounded bg-white/10 text-white font-bold">256</span>
-<span class="">BIT ENCRYPTION</span>
-</div>
-<div class="inline-flex items-center gap-2 px-2.5 py-1.5 rounded bg-white/5 border border-white/10 text-[10px] font-mono text-slate-300 font-semibold">
-<span class="px-1.5 py-0.5 rounded bg-white/10 text-white font-bold">PCI</span>
-<span class="">DSS COMPLIANT</span>
-</div>
-</div>
 <!-- Center: Payment Gateways Pill Container -->
 <div class="order-1 lg:order-2 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center gap-3 shadow-inner overflow-x-auto max-w-full">
 <span class="text-[9px] font-mono uppercase text-slate-500 shrink-0">Pay With</span>
@@ -688,14 +664,11 @@ export const landingHtml = `
           </div>
 </div>
 </div>
-<!-- Right: Copyright & Version -->
+<!-- Right: Copyright -->
 <div class="text-right order-3 shrink-0 flex flex-col items-center lg:items-end gap-1">
 <p class="text-xs text-slate-400 font-sans">
-          © 2026 SupportKori Inc. All rights reserved.
+          © 2026 UrShop. All rights reserved.
         </p>
-<span class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">
-          V2.4.0 STABLE
-        </span>
 </div>
 </div>
 </div>
